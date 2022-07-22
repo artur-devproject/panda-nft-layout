@@ -1,0 +1,26 @@
+.join {
+    background: radial-gradient(151.95% 463.58% at -44.29% -62.34%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
+    backdrop-filter: blur(74px);
+    border-radius: 16px;
+    border: 2px solid #398DEE;
+}
+.join__box {
+    margin: 0px auto;
+    padding: 48px 20px;
+    max-width: 830px;
+    text-align: center;
+}
+.join__text {
+    margin-top: 24px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(32/16);
+    text-align: center;
+    color: #FFFFFF;
+}
+.join__button {
+    margin-top: 40px;
+    padding: 16px 40px;
+}

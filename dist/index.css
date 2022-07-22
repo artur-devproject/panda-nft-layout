@@ -1,0 +1,947 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  background: linear-gradient(to right, #000, #0F0B33);
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 200%;
+  color: #fff;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+._container {
+  max-width: 1230px;
+  margin: 0px auto;
+  padding: 0px 15px;
+  box-sizing: content-box;
+}
+
+.header {
+  padding-top: 40px;
+  padding-bottom: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  position: relative;
+  z-index: 20;
+  flex: 1 3 340px;
+}
+
+.header__menu {
+  flex: 1 1 860px;
+  position: relative;
+  z-index: 20;
+  display: flex;
+}
+
+.header__menu-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0px -16px;
+}
+.header__menu-list li {
+  margin: 0px 16px;
+}
+
+.header__menu-link {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 32px;
+  color: #ADB9C7;
+}
+.header__menu-link:active {
+  color: #fff;
+  border-bottom: 2px solid #1E50FF;
+}
+.header__menu-link:hover {
+  color: #fff;
+  border-bottom: 2px solid #1E50FF;
+}
+
+.header__burger {
+  display: none;
+  position: relative;
+  z-index: 20;
+}
+
+.header__button {
+  padding: 12px 24px;
+  position: relative;
+  z-index: 20;
+  margin-left: auto;
+}
+
+@media (max-width: 950px) {
+  body.lock {
+    overflow: hidden;
+  }
+  .header {
+    padding: 15px 0px;
+  }
+  .header__menu-list {
+    display: block;
+  }
+  .header__menu-list li {
+    margin-bottom: 30px;
+  }
+  .header__menu {
+    padding: 100px 50px 50px 50px;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    transition: left 0.5s ease-out;
+    overflow: auto;
+    z-index: 5;
+  }
+  .header__menu.active {
+    left: 0;
+  }
+  .header__burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+  }
+  .header__burger::before, .header__burger::after, .header__burger span {
+    transition: all 0.5s ease;
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+  }
+  .header__burger::before {
+    top: 0;
+  }
+  .header__burger::after {
+    bottom: 0;
+  }
+  .header__burger span {
+    top: 9px;
+  }
+  .header__burger.active::before {
+    transform: rotate(45deg);
+    top: 9px;
+  }
+  .header__burger.active::after {
+    transform: rotate(-45deg);
+    bottom: 9px;
+  }
+  .header__burger.active span {
+    transform: scale(0);
+  }
+}
+.page {
+  padding-top: 184px;
+}
+
+.page__header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+.page__header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(15, 11, 51, 0.8));
+  z-index: 10;
+}
+
+.page__main-block {
+  padding: 0px 0px 60px 0px;
+}
+
+.page__partners {
+  padding: 60px 0px 80px 0px;
+}
+
+.page__features {
+  padding: 80px 0px;
+}
+
+.page__auctions {
+  padding: 80px 0px;
+}
+
+.page__artists {
+  padding: 80px 0px;
+}
+
+.page__hot-nfts {
+  padding: 80px 0px;
+}
+
+.page__join {
+  padding: 80px 0px 160px 0px;
+}
+
+.page__footer {
+  background: linear-gradient(to left, #000, #0F0B33);
+}
+
+@media (max-width: 425px) {
+  .page {
+    padding-top: 90px;
+  }
+  .page__main-block {
+    padding: 0px 0px 30px 0px;
+  }
+  .page__partners {
+    padding: 30px 0px 40px 0px;
+  }
+}
+.main-block {
+  display: flex;
+}
+
+.main-block__content-box {
+  padding: 80px 0px;
+  min-width: 630px;
+}
+
+.main-block__content-title {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 80px;
+  color: #FFFFFF;
+}
+
+.main-block__content-text {
+  margin-top: 24px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #ADB9C7;
+}
+
+.main-block__content-button {
+  margin-top: 40px;
+  padding: 12px 42px;
+}
+
+.main-block__full-card {
+  margin-left: 48px;
+}
+
+.main-block__short-card {
+  margin-left: 27px;
+}
+
+@media (max-width: 768px) {
+  .main-block__full-card {
+    display: none;
+  }
+  .main-block__short-card {
+    display: none;
+  }
+  .main-block__content-box {
+    min-width: auto;
+    text-align: center;
+    padding: 0px;
+  }
+}
+.features__title {
+  text-align: center;
+}
+
+.features__body {
+  margin: 56px -12px -12px -12px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.partners div {
+  margin: 0 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 1024px) {
+  .partners div {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: -20px 0px;
+  }
+  .partners div img {
+    margin: 20px 20px;
+  }
+}
+.auctions__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.auctions__header h1 {
+  text-align: left;
+  flex: 1 0 auto;
+}
+
+.auctions__button {
+  padding: 12px 46px;
+}
+
+.auctions__body {
+  margin: -40px -12px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .auctions__header {
+    display: block;
+    text-align: center;
+  }
+  .auctions__header h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+.artists__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 56px;
+}
+
+.artists__button {
+  padding: 12px 46px;
+}
+
+.artists__body {
+  margin: -24px -12px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .artists__header {
+    display: block;
+    text-align: center;
+  }
+  .artists__header h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+.hot-nfts__header {
+  margin-bottom: 56px;
+  display: flex;
+  align-items: center;
+}
+
+.hot-nfts__title {
+  text-align: left;
+  flex: 1 0 auto;
+}
+
+.hot-nfts__buttons {
+  margin: -12px;
+}
+
+.hot-nfts__button {
+  margin: 12px;
+  padding: 16px 32px;
+}
+
+.hot-nfts__body {
+  margin: -16px -12px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hot-nfts__footer {
+  margin-top: 56px;
+  text-align: center;
+}
+
+.hot-nfts__bottom-button {
+  padding: 12px 46px;
+}
+
+@media (max-width: 1200px) {
+  .hot-nfts__header {
+    display: block;
+  }
+  .hot-nfts__header h1 {
+    text-align: center;
+  }
+  .hot-nfts__buttons {
+    margin-top: 56px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .hot-nfts__button {
+    flex: 1 0 30%;
+  }
+}
+@media (max-width: 375px) {
+  .hot-nfts__body {
+    margin: -12px;
+    display: block;
+  }
+}
+.join {
+  background: radial-gradient(151.95% 463.58% at -44.29% -62.34%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
+  backdrop-filter: blur(74px);
+  border-radius: 16px;
+  border: 2px solid #398DEE;
+}
+
+.join__box {
+  margin: 0px auto;
+  padding: 48px 20px;
+  max-width: 830px;
+  text-align: center;
+}
+
+.join__text {
+  margin-top: 24px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 2;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.join__button {
+  margin-top: 40px;
+  padding: 16px 40px;
+}
+
+.footer {
+  padding: 88px 0px 64px 0px;
+}
+
+.footer__main {
+  display: flex;
+}
+
+.footer__description {
+  max-width: 393px;
+}
+
+.footer__text {
+  margin-top: 24px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 2;
+  color: #ADB9C7;
+}
+
+.fotter__nav-bar {
+  width: 100%;
+  margin-left: 88px;
+  margin-top: -24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__nav-box {
+  margin-top: 24px;
+  min-width: 200px;
+}
+
+.footer__title {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.3333333333;
+  color: #FFFFFF;
+  background-color: transparent;
+}
+
+.footer__menu-list {
+  margin-top: 24px;
+}
+
+.footer__menu-item {
+  margin-top: 16px;
+}
+
+.footer__menu-link {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 2;
+  color: #ADB9C7;
+  list-style: none;
+}
+
+.footer__address {
+  margin-top: 24px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 2;
+  color: #ADB9C7;
+}
+
+.footer__social-box {
+  margin-top: 16px;
+}
+
+.footer__social-icon {
+  max-height: 32px;
+}
+.footer__social-icon:not(:last-child) {
+  margin-right: 24px;
+}
+
+.footer__rights {
+  margin-top: 24px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7142857143;
+  color: #FFFFFF;
+}
+
+@media (max-width: 1024px) {
+  ._hide-menu {
+    display: none;
+  }
+  ._btn-menu {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  .fotter__nav-bar {
+    display: block;
+  }
+  .footer {
+    text-align: center;
+  }
+  .footer__main {
+    display: flex;
+    justify-content: center;
+  }
+  .footer__description {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .footer__main {
+    display: block;
+  }
+  .fotter__nav-bar {
+    margin: 60px 0px;
+  }
+}
+.action-button {
+  text-align: center;
+  min-height: 56px;
+  background: #1E50FF;
+  border-radius: 16px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 32px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.block-title {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 64px;
+  color: #FFFFFF;
+}
+
+.feature {
+  padding: 1px;
+  border-radius: 16px;
+  background-color: #272D37;
+  min-width: 280px;
+  max-width: 384px;
+  margin: 12px;
+}
+.feature:hover {
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), 25%, rgba(255, 255, 255, 0.6666666667), 75%, rgba(255, 255, 255, 0.2));
+  cursor: pointer;
+}
+
+.feature__box {
+  background-color: #272D37;
+  border-radius: 16px;
+  padding: 56px 35px;
+  text-align: center;
+}
+
+.feature__title {
+  margin-top: 48px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #FFFFFF;
+}
+
+.feature__text {
+  margin-top: 24px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #ADB9C7;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+}
+.logo span {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 32px;
+  color: #fff;
+  margin-left: 10px;
+}
+
+.nft-card {
+  min-width: 282px;
+  max-width: 384px;
+  background-color: #272D37;
+  border-radius: 24px;
+  padding: 24px;
+  margin: 16px auto;
+}
+.nft-card:hover ._blur {
+  display: block;
+}
+.nft-card:hover .nft-card__button {
+  display: block;
+}
+
+._blur {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+}
+
+.nft-card__button {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 16px 0px;
+  width: 57%;
+  display: none;
+  z-index: 2;
+}
+
+.nft-card__body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.nft-card__image {
+  object-fit: cover;
+  height: 352px;
+  width: 100%;
+  border-radius: 24px;
+}
+
+.nft-card__timer {
+  position: absolute;
+  bottom: 16px;
+  display: flex;
+  align-items: center;
+  background: #0F182E;
+  border-radius: 16px;
+  padding: 8px 24px;
+  min-height: 42px;
+}
+.nft-card__timer h5 {
+  margin-left: 8px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 1.625;
+  color: #FFFFFF;
+}
+
+.nft-card__name {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nft-card__name img {
+  margin-left: 15px;
+}
+.nft-card__name h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: "Urbanist";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.3333333333;
+  color: #FFFFFF;
+}
+
+.nft-card__details {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.nft-card__author-img {
+  margin-right: 16px;
+}
+
+.nft-card__author {
+  max-width: 40%;
+  vertical-align: middle;
+}
+.nft-card__author span {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7142857143;
+  color: #8F9CA9;
+}
+.nft-card__author h5 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.5555555556;
+  color: #FFFFFF;
+}
+
+.nft-card__price {
+  text-align: right;
+  flex: 1 1 auto;
+}
+.nft-card__price span {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7142857143;
+  color: #8A8AA0;
+}
+.nft-card__price h5 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #FFFFFF;
+}
+
+@media (max-width: 425px) {
+  .nft-card {
+    border-radius: 12px;
+    padding: 12px;
+  }
+  .nft-card__image {
+    height: 250px;
+    border-radius: 12px;
+  }
+  .nft-card__author-img {
+    display: none;
+  }
+}
+.regular-button {
+  text-align: center;
+  min-height: 56px;
+  border: 1px solid #1E50FF;
+  border-radius: 16px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 32px;
+  color: #fff;
+  background-color: transparent;
+  cursor: pointer;
+}
+.regular-button:hover {
+  background: #1E50FF;
+  box-shadow: 10px 10px 42px rgba(30, 80, 255, 0.5);
+}
+
+.artist-card {
+  width: 282px;
+  padding: 8px 8px 16px 8px;
+  background: #272D37;
+  border-radius: 16px;
+  text-align: center;
+  margin: 24px auto;
+}
+
+.artist-card__image {
+  border-radius: 16px;
+  object-fit: cover;
+  height: 225px;
+  width: 100%;
+}
+
+.artist-card__icon {
+  margin-bottom: -52px;
+  transform: translate(0, -50%);
+}
+
+.artist-card__title {
+  margin-top: 16px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #FFFFFF;
+}
+
+.artist-card__price {
+  margin-top: 8px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+
+.category-button {
+  text-align: center;
+  min-height: 56px;
+  background: rgba(30, 80, 255, 0.1);
+  border: 1px solid #1E50FF;
+  border-radius: 8px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+.category-button:hover {
+  background: #1E50FF;
+  box-shadow: 10px 10px 42px rgba(30, 80, 255, 0.5);
+  border-radius: 8px;
+}
+
+.ornaments {
+  position: absolute;
+  background: rgba(30, 80, 255, 0.5);
+  filter: blur(700px);
+}
+
+.ornament-1 {
+  width: 638px;
+  height: 587.33px;
+  left: 866px;
+  top: 534px;
+}
+
+.ornament-2 {
+  width: 638px;
+  height: 587.33px;
+  left: -418px;
+  top: 2199px;
+}
+
+.ornament-3 {
+  width: 638px;
+  height: 587.33px;
+  left: 905px;
+  top: 4231px;
+}

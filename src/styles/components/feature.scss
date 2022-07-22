@@ -1,0 +1,41 @@
+.feature {
+    padding: 1px;
+    border-radius: 16px;
+    background-color: #272D37;
+    min-width: 280px;
+    max-width: 384px;
+    margin: 12px;
+
+    &:hover {
+        background: linear-gradient(45deg, #fff3, 25%, #fffa, 75%, #fff3);
+        cursor: pointer;
+    }
+}
+
+.feature__box {
+    background-color: #272D37;
+    border-radius: 16px;
+    padding: 56px 35px;
+
+    text-align: center;
+}
+
+.feature__title {
+    margin-top: 48px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: #FFFFFF;
+}
+
+.feature__text {
+    margin-top: 24px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #ADB9C7;
+}

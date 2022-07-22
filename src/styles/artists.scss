@@ -1,0 +1,33 @@
+.artists {
+    
+
+}
+
+.artists__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 56px;
+}
+
+.artists__button {
+    padding: 12px 46px;
+}
+
+.artists__body {
+    margin: -24px -12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .artists__header {
+        display: block;
+        text-align: center;
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+}

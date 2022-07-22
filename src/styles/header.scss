@@ -1,0 +1,143 @@
+.header {
+    padding-top: 40px;
+    padding-bottom: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    position: relative;
+    z-index: 20;
+    flex: 1 3 340px;
+}
+
+.header__menu {
+    flex: 1 1 860px;
+    position: relative;
+    z-index: 20;
+    display: flex;
+
+}
+
+.header__menu-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0px -16px;
+
+    li {
+        margin: 0px 16px;
+    }
+}
+
+.header__menu-link {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 32px;
+    color: #ADB9C7;
+
+    &:active {
+        color: #fff;
+        border-bottom: 2px solid #1E50FF;
+    }
+
+    &:hover {
+        color: #fff;
+        border-bottom: 2px solid #1E50FF;
+    }
+}
+
+
+.header__burger {
+    display: none;
+    position: relative;
+    z-index: 20;
+}
+
+.header__button {
+    padding: 12px 24px;
+    position: relative;
+    z-index: 20;
+    margin-left: auto;
+}
+
+@media(max-width: 950px) {
+    body.lock {
+        overflow: hidden;
+    }
+    .header {
+        padding: 15px 0px;
+    }
+    .header__menu-list {
+        display: block;
+
+        li {
+            margin-bottom: 30px;
+        }
+    }
+    .header__menu {
+        padding: 100px 50px 50px 50px;
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        transition: left 0.5s ease-out;
+        overflow: auto;
+        z-index: 5;
+
+        &.active {
+            left: 0;
+        }
+    }
+    .header__burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+
+        &::before, &::after, span {
+            transition: all 0.5s ease;
+            content: '';
+            background-color: #fff;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            left: 0;
+        }
+
+        &::before {
+            top: 0;
+        }
+
+        &::after {
+            bottom: 0;
+        }
+
+        span {
+            top: 9px;
+        }
+
+        &.active {
+            
+            &::before {
+                transform: rotate(45deg);
+                top: 9px;
+            }
+            &::after {
+                transform: rotate(-45deg);
+                bottom: 9px;
+            }
+            span {
+                transform: scale(0);
+            }
+        }
+    }
+
+}

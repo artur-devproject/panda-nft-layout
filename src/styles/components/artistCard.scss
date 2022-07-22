@@ -1,0 +1,40 @@
+.artist-card {
+    width: 282px;
+    padding: 8px 8px 16px 8px;
+    background: #272D37;
+    border-radius: 16px;
+    text-align: center;
+    margin: 24px auto;
+}
+
+.artist-card__image {
+    border-radius: 16px;
+    object-fit: cover;
+    height: 225px;
+    width: 100%;
+}
+
+.artist-card__icon {
+    margin-bottom: -52px;
+    transform: translate(0, -50%);
+}
+
+.artist-card__title {
+    margin-top: 16px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: #FFFFFF;
+}
+
+.artist-card__price {
+    margin-top: 8px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+}

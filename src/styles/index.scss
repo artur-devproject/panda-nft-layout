@@ -1,0 +1,86 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+html,
+body {
+    height: 100%;
+    background: linear-gradient(to right, #000, #0F0B33);
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 200%;
+    color: #fff;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+._container {
+    max-width: 1230px;
+    margin: 0px auto;
+    padding: 0px 15px;
+    box-sizing: content-box;
+}
+
+// FONTS
+//@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;700;900&family=Rubik&family=Urbanist:wght@700&display=swap');
+
+// BLOCKS ---------------------------------- //
+
+@import 'header.scss';
+@import 'page.scss';
+@import 'mainBlock.scss';
+@import 'features.scss';
+@import 'partners.scss';
+@import 'auctions.scss';
+@import 'artists.scss';
+@import 'hotnfts.scss';
+@import 'join.scss';
+@import 'footer.scss';
+
+
+// COMPONENTS ---------------------------------- //
+
+@import 'components/actionButton.scss';
+@import 'components/blockTitle.scss';
+@import 'components/feature.scss';
+@import 'components/lineMenu.scss';
+@import 'components/logo.scss';
+@import 'components/nftCard.scss';
+@import 'components/regularButton.scss';
+@import 'components/artistCard.scss';
+@import 'components/categoryButton.scss';
+@import 'components/ornaments.scss';

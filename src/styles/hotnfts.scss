@@ -1,0 +1,59 @@
+.hot-nfts {
+}
+.hot-nfts__header {
+    margin-bottom: 56px;
+    display: flex;
+    align-items: center;
+}
+.hot-nfts__title {
+    text-align: left;
+    flex: 1 0 auto;
+}
+.hot-nfts__buttons {
+    margin: -12px;
+}
+.hot-nfts__button {
+    margin: 12px;
+    padding: 16px 32px;
+}
+
+.hot-nfts__body {
+    margin: -16px -12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.hot-nfts__footer {
+    margin-top: 56px;
+    text-align: center;
+}
+
+.hot-nfts__bottom-button {
+    padding: 12px 46px;
+}
+
+@media(max-width: 1200px) {
+    .hot-nfts__header {
+        display: block;
+        h1 {
+            text-align: center;
+        }
+    }
+    .hot-nfts__buttons {
+        margin-top: 56px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .hot-nfts__button {
+        flex: 1 0 30%;
+    }
+}
+
+@media(max-width: 375px) {
+    .hot-nfts__body {
+        margin: -12px;
+        display: block;
+    }
+}

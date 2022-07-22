@@ -1,0 +1,20 @@
+.partners {
+    div {
+        margin: 0 25px;
+        display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+}
+
+@media (max-width: 1024px) {
+    .partners div {
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: -20px 0px;
+
+        img {
+            margin: 20px 20px;
+        }
+    }
+}

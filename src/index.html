@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html', { "title": "Panda NFT" })
+<body>
+    <div class="wrapper">
+		<div class="ornaments ornament-1"></div>
+		<div class="ornaments ornament-2"></div>
+		<div class="ornaments ornament-3"></div>
+		<header class="page__header">
+			<div class="_container">
+				@@include('html/header.html')
+			</div>
+		</header>
+        <main class="page _container">
+			<div class="page__main-block">
+				@@include('html/index/mainBlock.html')
+			</div>
+            <div class="page__partners">
+				@@include('html/index/partners.html')
+			</div>
+			<div class="page__features">
+				@@include('html/index/features.html')
+			</div>
+			<div class="page__auctions">
+				@@include('html/index/auctions.html')
+			</div>
+			<div class="page__artists">
+				@@include('html/index/artists.html')
+			</div>
+			<div class="page__hot-nfts">
+				@@include('html/index/hotnfts.html')
+			</div>
+			<div class="page__join">
+				@@include('html/index/join.html')
+			</div>
+        </main>
+		<footer class="page__footer">
+			<div class="_container">
+				@@include('html/footer.html')
+			</div>
+		</footer>
+    </div>
+	
+</body>
+</html>
